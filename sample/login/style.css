@@ -1,0 +1,161 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body,
+main {
+	height: 100%;
+}
+
+.clearfix::after {
+	display: block;
+	clear: both;
+	content: '';
+}
+
+.header {
+	position: absolute;
+	top: 20px;
+	width: 100%;
+}
+
+.header a {
+	font-size: 30px;
+	float: right;
+	margin-right: 20px;
+	color: black;
+	text-decoration-style: none;
+}
+
+main {
+	background: linear-gradient(to right top, rgba(38, 50, 105, .78), rgba(255, 152, 0, .45)), url(http://ww1.sinaimg.cn/large/61f3f2d4ly1fo0xjadwjkj21hc0xctxt.jpg) center center no-repeat;
+	background-size: cover;
+}
+
+.main {
+	display: none;
+}
+
+.modal-login {
+	height: 280px;
+}
+
+.modal-register {
+	overflow: hidden;
+	height: 320px;
+}
+
+.modal-login,
+.modal-register {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	margin: 20px auto;
+	padding: 20px;
+	transform: translate(-50%, -50%);
+	border-radius: 9px;
+	background-color: rgba(255, 255, 255, .79);
+	box-shadow: 0 5px 5px 5px rgba(53, 53, 53, .8);
+}
+
+.register .modal-register,
+.login .modal-login {
+	transition: 1s;
+	transform: translate(-50%, -50%) rotateY(0deg);
+	backface-visibility: hidden;
+}
+
+.login .modal-register,
+.register .modal-login {
+	transition: 1s;
+	transform: translate(-50%, -50%) rotateY(180deg);
+	backface-visibility: hidden;
+}
+
+#tabs .active {
+	color: #000;
+	border-bottom: 3px solid #559461af;
+}
+
+.close i {
+	font-size: 17px;
+	position: absolute;
+	float: left;
+	margin-left: 350px;
+	color: #2a3341;
+}
+
+#tabs {
+	font-size: 23px;
+	text-align: center;
+	color: #2a3341;
+}
+
+#tabs a {
+	margin: 0 10px;
+	text-decoration: none;
+	color: #2a3341a7;
+}
+
+#login-form {
+	position: relative;
+	height: 200px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+#login-form form {
+	position: absolute;
+	top: 25px;
+	left: 20px;
+	width: 318px;
+}
+
+#register-form form {
+	position: absolute;
+	top: 80px;
+	left: 40px;
+	width: 318px;
+}
+
+#errormsg {
+	display: block;
+	margin-top: 10px;
+	text-align: center;
+	text-align: center;
+	color: #e11f1fc1;
+}
+
+.input-field input {
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	margin: 10px auto;
+	padding: 10px 30px;
+	outline: none;
+}
+
+.input-field i {
+	position: absolute;
+	z-index: 2;
+	float: left;
+	padding: 21px 0 0 11px;
+}
+
+.input-field-btn input {
+	margin-top: 10px;
+	padding: 6px 10px;
+	border: none;
+	outline: none;
+	box-shadow: 0 0 2px rgba(0, 0, 0, .4);
+}
+
+.input-field-btn input:hover {
+	padding: 6px 10px;
+	border: none;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, .4);
+}
